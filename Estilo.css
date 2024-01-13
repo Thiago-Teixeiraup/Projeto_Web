@@ -4,38 +4,127 @@ body {
     margin: 0 auto;
 }
 
-.Menu-principal {
-    width: 100%;
-    background-color: #ffffff;
-    height: 60px;
+.header {
+    background: #a5c;
+    padding-inline: 16px;
+
 }
 
-main {
-    margin: 0 auto;
-    width: 980px;
-    float: left;
-    position: relative;
-}
+.nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
 
-.logo {
-    float: left;
-    padding: 16px;
-    width: 70%;
-}
-
-.redes-sociais ul li {
-    width: 500;
-    height: 600;
-    margin-left: 15px;
     display: flex;
-    float: left;
-    list-style: none;
-    padding: 10px;
-}
+    justify-content: space-between;
+    align-items: center;
 
-.button {}
+    .logo {
+        font-size: 48px;
+    }
 
-.redes-sociais {
-    width: 25px;
-    float: right;
+    .nav-list {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+
+    }
+
+    .nav-list a {
+        font-size: 18px;
+        color: #fff;
+        padding-block: 16px;
+    }
+
+    .hero {
+        height: calc(100vh-70px);
+        background: center / cover no-repeat url("./bg.jpg");
+    }
+
+    .hamburguer {
+        border: none;
+        background: none;
+        border-top: 3px solid #fff;
+        cursor: pointer;
+    }
+
+    .hamburguer::before,
+    .hamburguer::after {
+        content: " ";
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        margin-top: 5px;
+        position: relative;
+        transform: 0.3s;
+    }
+
+    @media (max-width: 750px) {
+        display: block;
+        z-index: 1;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #a5c;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .nav-list a {
+        font-size: 24px;
+        opacity: 0;
+
+    }
+
+    .nav-list li:nth-child(1) a {
+        transition: 0.5s 0.2s;
+    }
+
+    .nav-list li:nth-child(2) a {
+        transition: 0.5s 0.4s;
+    }
+
+    .nav-list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
+
+    /* Estilos ativos */
+
+    .nav.active . .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+
+    }
+
+    .nav.nav.active .nav-list a {
+        opacity: 1;
+    }
+
+    .nav.nav.active .hamburguer {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    .nav.active .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    .nav.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px
+    }
 }
