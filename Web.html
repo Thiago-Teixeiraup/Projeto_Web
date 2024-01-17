@@ -7,33 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRAUP</title>
     <link rel="stylesheet" type="text/css" href="Estilo.css">
-    <script defer src="Scripst.js"></script>
+    <script defer src="Scripts.js"></script>
 
 </head>
 
 <body>
+    <header>
+        <h1>BRAUP</h1>
+    </header>
     <nav class="menu-lateral">
-        <button class="hamburger"></button>
+        <div class="btn-expandir">
+            <i class="fa-solid fa-bars"></i>
+        </div>
         <ul>
-            <li class="item-menu">
+            <li class="item-menu" onmouseover="moverIcone(this)" onmouseout="restaurarIcone(this)">
                 <a href="#">
-                    <span class="icon"><i class="fa-solid fa-house"></i></span>
+                    <span class="icon">
+                        <id class="fa-solid fa-house" &#9654;>
+                    </span>
                     <span class="txt-link">Home</span>
                 </a>
-            <li class="item-menu">
+            </li>
+            <li class="item-menu" onmouseover="moverIcone(this, 'rotate(90deg)')" onmouseout="restaurarIcone(this)">
                 <a href="#">
                     <span class="icon"><i class="fa-solid fa-newspaper"></i></span>
-                    <span class="txt-link">Noticias</span>
+                    <span class="txt-link">Notícias</span>
                 </a>
             </li>
-            <li class="item-menu">
+            <li class="item-menu" onmouseover="moverIcone(this, 'scale(1.5)')" onmouseout="restaurarIcone(this)">
                 <a href="#">
                     <span class="icon"><i class="fa-solid fa-right-to-bracket"></i></span>
                     <span class="txt-link">Login</span>
                 </a>
             </li>
-            </li>
-            <li class="item-menu">
+            <li class="item-menu" onmouseover="moverIcone(this, 'skewX(30deg)')" onmouseout="restaurarIcone(this)">
                 <a href="#">
                     <span class="icon"><i class="fa-solid fa-gear"></i></span>
                     <span class="txt-link">Configurações</span>
@@ -42,9 +49,11 @@
         </ul>
     </nav>
     <main>
-        <h1>BRAUP</h1>
-        <h5>Site Em Construção</h5>
+        <p>Bem-Vindo à minha página!</p>
     </main>
+    <footer>
+        <p>&copy; 2024 Minha Página. Todos os direitos reservados.</p>
+    </footer>
     <script src="https://kit.fontawesome.com/f5b1b67d3c.js" crossorigin="anonymous"></script>
 </body>
 
