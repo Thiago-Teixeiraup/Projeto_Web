@@ -16,7 +16,7 @@ h1 {
 }
 
 nav.menu-lateral {
-  width: 50px;
+  width: 10%;
   height: 100%;
   background-color: #202020;
   padding: 40px 0 40px 1%;
@@ -37,7 +37,9 @@ nav.menu-lateral:hover {
 
 .btn-expandir {
   width: 10%;
-  padding-left: 5%;
+  padding: 20px;
+  display: list-item;
+
 }
 
 .btn-expandir>i {
@@ -62,16 +64,22 @@ ul {
 
 ul li.item-menu:hover {
   background: #0066cc;
+  opacity: 0.;
+
 }
 
 .menu-lateral ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  align-items: center;
+
 }
 
 .menu-lateral li.item-menu {
   margin-bottom: 20px;
+  margin-left: 10px;
+  transition: background-color 0.3s;
 }
 
 .menu-lateral li.item-menu a {
